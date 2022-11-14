@@ -28,5 +28,11 @@ while True:
                 x = x + 20
     
     pygame.draw.rect(tela, (255,255,255), (x,y, 40, 4))
+    
+    if x == largura:
+        x = 0
+    
+    if y == altura:
+        y = 0
 
     pygame.display.update()
