@@ -6,12 +6,27 @@ pygame.init()
 
 largura = 640
 altura = 480
+x = 300
+y = 400
 
 tela = pygame.display.set_mode((largura, altura))
-pygame.display.set_caption("sla uns teste ae pá aprende")
+pygame.display.set_caption("projeto_pequeno_inicio")
 
 while True:
+
+    tela.fill((0,0,0))
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             exit()
+        if event.type == KEYDOWN:
+
+            if event.key == K_a:
+                x = x - 20
+
+            if event.key == K_d:
+                x = x + 20
+    
+    pygame.draw.rect(tela, (255,255,255), (x,y, 40, 4))
+
+    pygame.display.update()
