@@ -32,7 +32,4 @@ while True:
     if x == largura:
         x = 0
     
-    if y == altura:
-        y = 0
-
     pygame.display.update()
